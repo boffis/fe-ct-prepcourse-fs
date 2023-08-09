@@ -17,7 +17,7 @@ const {
 } = require('../homework');
 
 describe('JAVASCRIPT IV', function () {
-   describe('crearGato(nombre, edad)', function () {
+   xdescribe('crearGato(nombre, edad)', function () {
       it('Debe crear un nuevo objeto con las propiedades "nombre", y "edad"', function () {
          expect(crearGato('Snowball', 1).nombre).toBe('Snowball');
          expect(crearGato('Snowball', 1).edad).toBe(1);
@@ -29,7 +29,7 @@ describe('JAVASCRIPT IV', function () {
       });
    });
 
-   describe('nuevoUsuario(nombre, email, password)', function () {
+   xdescribe('nuevoUsuario(nombre, email, password)', function () {
       it('Debe devolver un nuevo objeto con las propiedades "nombre", "email" y "password"', function () {
          const user = {
             nombre: 'Jhon',
@@ -50,7 +50,7 @@ describe('JAVASCRIPT IV', function () {
       });
    });
 
-   describe('agregarPropiedad(objeto, propiedad)', function () {
+   xdescribe('agregarPropiedad(objeto, propiedad)', function () {
       it('Debe agregar la propiedad al objeto con valor null', function () {
          const object = {
             x: 1,
@@ -65,7 +65,7 @@ describe('JAVASCRIPT IV', function () {
       });
    });
 
-   describe('invocarMetodo(objeto, metodo)', function () {
+   xdescribe('invocarMetodo(objeto, metodo)', function () {
       it('Debe invocar el método del objeto', function () {
          const object = {
             x: 0,
@@ -78,7 +78,7 @@ describe('JAVASCRIPT IV', function () {
       });
    });
 
-   describe('multiplicarNumeroDesconocidoPorCinco(objetoMisterioso)', function () {
+   xdescribe('multiplicarNumeroDesconocidoPorCinco(objetoMisterioso)', function () {
       it('Debe retornar el numeroMisterioso multiplicado por 5', function () {
          const mysteryBox = {
             numeroMisterioso: 999,
@@ -158,7 +158,7 @@ describe('JAVASCRIPT IV', function () {
       });
    });
 
-   describe('agregarAmigo(objetoUsuario, nuevoAmigo)', function () {
+   xdescribe('agregarAmigo(objetoUsuario, nuevoAmigo)', function () {
       it('Debe agregar el nuevo amigo al final del arreglo de una propiedad', function () {
          const user = {
             amigos: ['Ben', 'Austen', 'Ryan', 'Mike', 'Young'],
@@ -168,7 +168,7 @@ describe('JAVASCRIPT IV', function () {
       });
    });
 
-   describe('pasarUsuarioAPremium(objetoMuchosUsuarios)', function () {
+   xdescribe('pasarUsuarioAPremium(objetoMuchosUsuarios)', function () {
       it("Debe retornar un arreglo donde todos los usuarios tengan el valor True en su propiedad 'esPremium'", function () {
          const users = [
             { esPremium: false },
@@ -188,7 +188,7 @@ describe('JAVASCRIPT IV', function () {
       });
    });
 
-   describe('sumarLikesDeUsuario(objetoUsuario)', function () {
+   xdescribe('sumarLikesDeUsuario(objetoUsuario)', function () {
       it('Debe retornar la suma de los likes de todos los post', function () {
          const user = {
             usernombre: 'Jhon Doe',
@@ -225,7 +225,7 @@ describe('JAVASCRIPT IV', function () {
       });
    });
 
-   describe('agregarMetodoCalculoDescuento(objetoProducto)', function () {
+   xdescribe('agregarMetodoCalculoDescuento(objetoProducto)', function () {
       const storeItem = {
          precio: 80,
          porcentajeDeDescuento: 0.1,

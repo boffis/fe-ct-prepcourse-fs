@@ -6,6 +6,14 @@ function deObjetoAarray(objeto) {
    // Estos elementos debe ser cada par clave:valor del objeto recibido.
    // [EJEMPLO]: {D: 1, B: 2, C: 3} ---> [['D', 1], ['B', 2], ['C', 3]].
    // Tu código:
+   keys = Object.keys (objeto)
+   final =[]
+   keys.forEach ((prop)=>{
+      caract = objeto[prop]
+      fuck = [prop, caract]
+      final.push (fuck)
+   })
+   return (final)
 }
 
 function numberOfCharacters(string) {
@@ -14,6 +22,17 @@ function numberOfCharacters(string) {
    // Las letras deben estar en orden alfabético.
    // [EJEMPLO]: "adsjfdsfsfjsdjfhacabcsbajda" ---> { a: 5, b: 2, c: 2, d: 4, f: 4, h:1, j: 4, s: 5 }
    // Tu código:
+jumble = string.split([])
+jumble = jumble.sort ()
+final = {}
+jumble.forEach ((letra)=>{
+   if(final.hasOwnProperty (letra)){
+      final[letra]++
+   } else {
+      final[letra] = 1
+   }
+})
+return(final)
 }
 
 function capToFront(string) {
@@ -22,6 +41,19 @@ function capToFront(string) {
    // Retornar el string.
    // [EJEMPLO]: soyHENRY ---> HENRYsoy
    // Tu código:
+   finlow = []
+   finup = []
+   word = string.split ([])
+   word.forEach ((letter)=>{
+      if(letter == letter.toUpperCase()){
+         finup.push(letter)
+      }else{
+         finlow.push(letter)
+      }
+   })
+   finlow = finlow.join([]) 
+   finup = finup.join([])
+   return (finup + finlow)
 }
 
 function asAmirror(frase) {
@@ -29,18 +61,60 @@ function asAmirror(frase) {
    // La diferencia es que cada palabra estará escrita al inverso.
    // [EJEMPLO]: "The Henry Challenge is close!"  ---> "ehT yrneH egnellahC si !esolc"
    // Tu código:
+   words = frase.split(' ')
+   fin = []
+   words.forEach((word)=>{
+      reverse = []
+      letters = word.split('')
+      letters.forEach((letra)=>{
+         reverse.unshift(letra)
+      })
+   fin.push (reverse.join(''))
+   })
+   return (fin.join(' '))
 }
 
 function capicua(numero) {
    // Si el número que recibes es capicúa debes retornar el string: "Es capicua".
    // Caso contrario: "No es capicua".
    // Tu código:
+   x = numero.toString()
+   array = x.split('')
+   largo = array.length - 1
+   bool = true
+   for (i = 0 ; i<array.length ; i++) {
+      if (array[i] != array[largo]){
+         bool = false
+      }
+      largo = largo - 1
+   }
+   if (bool){
+      return 'Es capicua'
+   } else { 
+      return 'No es capicua'
+   }
 }
 
 function deleteAbc(string) {
    // Tu tarea es eliminar las letras "a", "b" y "c" del string recibido.
    // Retorna el string sin estas letras.
    // Tu código:
+   letras = string.split('')
+   fin = []
+   letras.forEach((letra)=>{
+      switch (letra){
+         case 'a':
+            break;
+         case 'b':
+            break;
+         case 'c':
+            break;
+         default:
+            fin.push (letra)
+            break;
+      }
+   })
+   return (fin.join(''))
 }
 
 function sortArray(arrayOfStrings) {
@@ -49,6 +123,26 @@ function sortArray(arrayOfStrings) {
    // de la longitud de cada string.
    // [EJEMPLO]: ["You", "are", "beautiful", "looking"]  ---> [“You", "are", "looking", "beautiful"]
    // Tu código:
+   fin = []
+   fin [0] = arrayOfStrings.shift()
+   arrayOfStrings.forEach ((palabra)=>{
+      i = 1
+      if (palabra.length < fin[0]){
+         fin.unshift (palabra)
+      }
+      else{
+         fin.forEach ((dentro)=>{
+            if (fin.includes (palabra) = false){
+               if (dentro.length < palabra.length) {
+                  fin.splice (i, 0, palabra)
+               }
+            }
+            i++
+         })
+      }
+   })
+   return (fin)
+   
 }
 
 function buscoInterseccion(array1, array2) {
@@ -58,6 +152,14 @@ function buscoInterseccion(array1, array2) {
    // Si no tienen elementos en común, retornar un arreglo vacío.
    // [PISTA]: los arreglos no necesariamente tienen la misma longitud.
    // Tu código:
+   fin = []
+   array1.forEach ((num)=>{
+         if (array2.includes (num)){
+            fin.push (num)
+         }
+      })
+   return(fin)
+
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
