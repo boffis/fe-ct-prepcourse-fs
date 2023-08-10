@@ -122,27 +122,11 @@ function sortArray(arrayOfStrings) {
    // Debe retornar un nuevo arreglo, pero con las palabras ordenadas en orden creciente a partir
    // de la longitud de cada string.
    // [EJEMPLO]: ["You", "are", "beautiful", "looking"]  ---> [“You", "are", "looking", "beautiful"]
-   // Tu código:
-   fin = []
-   fin [0] = arrayOfStrings.shift()
-   arrayOfStrings.forEach ((palabra)=>{
-      i = 1
-      if (palabra.length < fin[0]){
-         fin.unshift (palabra)
-      }
-      else{
-         fin.forEach ((dentro)=>{
-            if (fin.includes (palabra) = false){
-               if (dentro.length < palabra.length) {
-                  fin.splice (i, 0, palabra)
-               }
-            }
-            i++
-         })
-      }
+   //  Tu código:
+   arrayOfStrings.sort((primerString,SegundoString) =>{
+      return  (primerString.length - SegundoString.length)
    })
-   return (fin)
-   
+   return arrayOfStrings
 }
 
 function buscoInterseccion(array1, array2) {
@@ -152,12 +136,14 @@ function buscoInterseccion(array1, array2) {
    // Si no tienen elementos en común, retornar un arreglo vacío.
    // [PISTA]: los arreglos no necesariamente tienen la misma longitud.
    // Tu código:
-   fin = []
-   array1.forEach ((num)=>{
-         if (array2.includes (num)){
-            fin.push (num)
+   var fin = []
+   array1.forEach(element1 =>{
+      array2.forEach(element2=>{
+         if(element1===element2 && !fin.includes(element1)){
+            fin.push(element1)
          }
       })
+   })
    return(fin)
 
 }

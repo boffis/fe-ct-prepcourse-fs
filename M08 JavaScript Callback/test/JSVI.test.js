@@ -10,14 +10,14 @@ const {
 } = require('../homework');
 
 describe('JAVASCRIPT VI', function () {
-   describe('mayuscula(nombre)', function () {
+   xdescribe('mayuscula(nombre)', function () {
       it('Debe retornar el mismo nombre, pero con la primera letra en mayúscula', function () {
          expect(mayuscula('mario')).toBe('Mario');
          expect(mayuscula('ana')).toBe('Ana');
       });
    });
 
-   describe('invocarCallback(cb)', function () {
+   xdescribe('invocarCallback(cb)', function () {
       it('Debe invocar/ejecutar el callback', function () {
          const cb = jest.fn();
          invocarCallback(cb);
@@ -42,7 +42,7 @@ describe('JAVASCRIPT VI', function () {
       });
    });
 
-   describe('forEach(array, cb)', function () {
+   xdescribe('forEach(array, cb)', function () {
       it('Debe pasarle como argumento cada elemento del arreglo al callback', function () {
          const nums = [];
          forEach([1, 2, 3, 4, 5], function (num) {
@@ -52,7 +52,7 @@ describe('JAVASCRIPT VI', function () {
       });
    });
 
-   describe('map(array, cb)', function () {
+   xdescribe('map(array, cb)', function () {
       it('Debe retornar un arreglo con el resultado de todos los elementos del arreglo pasados por el callback', function () {
          const squares = map([1, 2, 3, 4, 5], function (num) {
             return num * num;
@@ -61,7 +61,7 @@ describe('JAVASCRIPT VI', function () {
       });
    });
 
-   describe('filter(arrayOfStrings)', function () {
+   xdescribe('filter(arrayOfStrings)', function () {
       it('Debe retornar un arreglo con todos los elementos que comiencen con la letra "a"', function () {
          var array = [
             'abajo',

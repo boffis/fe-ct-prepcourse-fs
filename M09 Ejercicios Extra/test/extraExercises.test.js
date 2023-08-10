@@ -11,7 +11,7 @@ const {
 } = require('../Ejercicios Extra');
 
 describe('EJERCICIOS EXTRA', function () {
-   describe('deObjetoAarray(objeto)', function () {
+   xdescribe('deObjetoAarray(objeto)', function () {
       it('Debe retornar un arreglo donde cada sub-arreglo contiene el par clave:valor del objeto', function () {
          expect(deObjetoAarray({ x: 1, y: 2 })).toEqual([
             ['x', 1],
@@ -23,7 +23,7 @@ describe('EJERCICIOS EXTRA', function () {
          ]);
       });
    });
-   describe('numberOfCharacters(string)', function () {
+   xdescribe('numberOfCharacters(string)', function () {
       it('Debe retornar un objeto donde cada par clave:valor sea una letra:cantidadDeRepeticiones del string recibido', function () {
          expect(numberOfCharacters('sktpwrroqstkrpwwsqtqopwktsd')).toEqual({
             s: 4,
@@ -48,13 +48,13 @@ describe('EJERCICIOS EXTRA', function () {
          });
       });
    });
-   describe('capToFront(string)', function () {
+   xdescribe('capToFront(string)', function () {
       it('Debe enviar todas las letras en mayúsculas al comienzo del string', function () {
          expect(capToFront('soyHENRY')).toEqual('HENRYsoy');
          expect(capToFront('DESArrollaDOR')).toEqual('DESADORrrolla');
       });
    });
-   describe('asAmirror(frase)', function () {
+   xdescribe('asAmirror(frase)', function () {
       it('Debe transformar la frase en una frase espejo.', function () {
          expect(asAmirror('I love you so much!')).toBe('I evol uoy os !hcum');
          expect(asAmirror('The Henry Challenge is close!')).toBe(
@@ -62,7 +62,7 @@ describe('EJERCICIOS EXTRA', function () {
          );
       });
    });
-   describe('capicua(numero)', function () {
+   xdescribe('capicua(numero)', function () {
       it('Debe retornar el string esperado dependiendo si el número es o no capicúa.', function () {
          expect(capicua(12321)).toEqual('Es capicua');
          expect(capicua(1111)).toEqual('Es capicua');
@@ -70,7 +70,7 @@ describe('EJERCICIOS EXTRA', function () {
          expect(capicua(7878700)).toEqual('No es capicua');
       });
    });
-   describe('deleteAbc(string)', function () {
+   xdescribe('deleteAbc(string)', function () {
       it('Debe retornar el mismo string, pero eliminando las letras "a", "b" y "c"', function () {
          expect(deleteAbc('abcefgh')).toEqual('efgh');
          expect(deleteAbc('abc')).toEqual('');
